@@ -13,16 +13,6 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     
-    if (params[:filter] == nil and params[:ratings] == nil and params[:sort] == nil and 
-              (session[:filter] != nil or session[:ratings] != nil or session[:sort] != nil))
-      if (params[:filter] == nil and session[:filter] != nil)
-        params[:filter] = session[:filter]
-      end
-      if (params[:sort] == nil and session[:sort] != nil)
-        params[:sort] = session[:sort]
-      end
-      redirect_to movies_path(:filter => params[:filter], :sort => params[:sort], :ratings => params[:ratings]) 
-    else
   end
 
   def new

@@ -19,6 +19,10 @@ class MoviesController < ApplicationController
       @movies = @movies.sort_by do |item|
         item[:title]
       end 
+    elsif sort == "release_date"
+      @movies = @movies.sort_by do |item|
+        item[:release_date]
+      end 
     end
 
     

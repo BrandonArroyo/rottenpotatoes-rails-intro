@@ -11,7 +11,18 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = ["Aladdin"]
+
+    @movies = Movie.all
+    sort = params[:sort]
+   
+    if sort == "title"
+      @movies = @movies.sort_by do |item|
+        item[:title]
+      end 
+    end
+
+    
+    # puts @movies
 
   end
 

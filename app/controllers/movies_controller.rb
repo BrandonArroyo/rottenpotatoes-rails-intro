@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = ["branodn","brandon"]
+    @movies = ["Aladin"]
 
   end
 
